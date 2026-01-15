@@ -1,24 +1,25 @@
 package mjBussinessLogic.mjEntities;
 
-import mjBussinessLogic.mjFactoryBL;
 import mjBussinessLogic.mjInterfaces.ImjHormiga;
-import mjDataAccess.mjDAOs.mjHormigaDAO;
 import mjDataAccess.mjDTOs.mjHormigaDTO;
 
-public abstract class mjHormiga implements ImjHormiga {
-    protected mjFactoryBL<mjHormigaDTO> factory = new mjFactoryBL<>(mjHormigaDAO.class);
-    public mjHormigaDTO data = new mjHormigaDTO();
+public abstract class mjHormiga implements ImjHormiga{
+    protected mjHormigaDTO data;
+    protected String superHabilidad;
+    protected String sexo;
 
-    // protected HormigaDAO hormigaDAO;
-    // protected Hormiga() throws AppException  {
-    //     this.hormigaDAO = new HormigaDAO();
-    // }
+    public mjHormiga() {
+        data = new mjHormigaDTO();
+    }
 
-    // public FactoryBL<HormigaDTO> factory = new FactoryBL<>(() -> {
-    //     try {
-    //         return new HormigaDAO();
-    //     } catch (Exception e) {
-    //         new RuntimeException();
-    //     }
-    // });
+    public String getSuperHabilidad() {
+        return superHabilidad;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    @Override
+    public abstract boolean vive(String alimento, String genoma);
 }

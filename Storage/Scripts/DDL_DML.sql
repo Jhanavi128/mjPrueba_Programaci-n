@@ -14,6 +14,7 @@ CREATE TABLE mjAlimentoTipo(
     ,mjFechaCreacion  DATETIME NOT NULL  DEFAULT (datetime('now','localtime'))
     ,mjFechaModifica  DATETIME NOT NULL  DEFAULT (datetime('now','localtime'))
 );
+
 CREATE TABLE mjHormigaTipo (
      IdmjHormigaTipo  INTEGER PRIMARY KEY AUTOINCREMENT
     ,mjNombre         VARCHAR(15)  NOT NULL UNIQUE

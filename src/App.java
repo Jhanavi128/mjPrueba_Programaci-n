@@ -1,18 +1,20 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 import mjAppComponent.mjConsoleApp.mjSistemaRuso;
-import mjBussinessLogic.mjEntities.mjAutomata;
-import mjDataAccess.mjDAOs.mjAlimentoTipoDAO;
-import mjDataAccess.mjDAOs.mjAntCiberDronDAO;
-import mjDataAccess.mjDAOs.mjHormigaDAO;
-import mjDataAccess.mjDTOs.mjAlimentoTipoDTO;
-import mjDataAccess.mjDTOs.mjVWHormigaDTO;
-import mjInfrastructure.AppException;
+//import mjBussinessLogic.mjEntities.mjAutomata;
+//import mjDataAccess.mjDAOs.mjAlimentoTipoDAO;
+//import mjDataAccess.mjDAOs.mjAntCiberDronDAO;
+//import mjDataAccess.mjDAOs.mjHormigaDAO;
+//import mjDataAccess.mjDTOs.mjAlimentoTipoDTO;
+//import mjDataAccess.mjDTOs.mjVWHormigaDTO;
+//import mjInfrastructure.AppException;
 
 public class App {
     public static void main(String[] args) {
 
-        try{
+        mjSistemaRuso sistema = new mjSistemaRuso();
+        sistema.ejecutar();
+        /*try{
             mjAntCiberDronDAO dao = new mjAntCiberDronDAO();
             for(var dto : dao.readAll()){
                 System.out.println(dto.toString());
@@ -20,6 +22,7 @@ public class App {
         }catch(Exception e){
             
         }
+        */
 
         /*try{
             mjHormigaDAO dao = new mjHormigaDAO();

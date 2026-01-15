@@ -1,13 +1,13 @@
 package mjBussinessLogic.mjEntities;
 
-import java.util.List;
+//import java.util.List;
 
-import mjDataAccess.mjDTOs.mjHormigaDTO;
-import mjInfrastructure.AppException;
+//import mjDataAccess.mjDTOs.mjHormigaDTO;
+//import mjInfrastructure.AppException;
 
 public class mjHLarva extends mjHormiga {
 
-    public mjHormigaDTO getLava(int id) throws AppException{
+    /*public mjHormigaDTO getLava(int id) throws AppException{
         data = factory.getBy(id);
         return data;
     }
@@ -27,4 +27,18 @@ public class mjHLarva extends mjHormiga {
     public String toString() {
         return "HLarva {}";
     }
+    */
+    
+   @Override
+    public boolean vive(String alimento, String genoma) {
+
+        if (alimento.equalsIgnoreCase("Nectar")) {
+            this.superHabilidad = "SuperReproductora";
+            this.sexo = genoma; // X, XX, XY
+            return true;
+        }
+
+        return false;
+    }
+
 }

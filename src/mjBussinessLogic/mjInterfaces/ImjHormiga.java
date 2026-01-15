@@ -1,5 +1,5 @@
 package mjBussinessLogic.mjInterfaces;
 
-public interface ImjHormiga {
-
+public interface ImjHormiga { //REFACTORIZACION
+    boolean vive(String alimento, String genoma);
 }
