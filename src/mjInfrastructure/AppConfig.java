@@ -1,0 +1,22 @@
+package mjInfrastructure;
+
+import java.net.URL;
+
+public abstract class AppConfig {
+    //Paths Storage
+    public static final String DATABASE = "jdbc:sqlite:storage\\DataBase\\antCiberDron.sqlite";
+    public static final String DATAFILE = "Storage\\DataFile\\Molina_Jhanavi.csv";
+    public static final String LOGFILE  = "Storage\\Logs\\AppErrors.log";
+
+    //Resources
+    public static final URL URL_MAIN    = AppConfig.class.getResource("Resource/logo.png");
+    public static final URL URL_LOGO    = AppConfig.class.getResource("Resource/logo.png");
+    public static final URL URL_SPLASH  = AppConfig.class.getResource("/mjInfrastructure/mjAssets/mjImg/Splash.png");
+
+    //AppMSGs
+    public static final String MSG_DEFAULT_ERROR    = "Ups! Error inesperado. Por favor, contacte al administrador del sistema.";
+    public static final String MSG_DEFAULT_CLASS    = "undefined";
+    public static final String MSG_DEFAULT_METHOD   = "undefined";
+
+    private AppConfig() {}
+}
